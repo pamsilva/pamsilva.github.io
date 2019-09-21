@@ -1,1 +1,126 @@
-Hello Potato
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pedro Silva</title>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <script type="text/javascript">
+        function updateHideTriggerText(){
+            var elem = document.getElementsByClassName('toggle-trigger')[0];
+            var listElems = document.querySelectorAll("#reference-list li");
+
+            var visibleElems = 0;
+            for (x of listElems){
+                if (x.style.getPropertyValue('display') != "none") {
+                    visibleElems = visibleElems + 1;
+                }
+            }
+
+            elem.text = visibleElems === listElems.length ? "Show less ..." : "Show More ...";
+        }
+
+        function allItemsDisplay(){
+            var elems = document.getElementsByClassName('toggle-hide');
+
+            for (x of elems){
+                var newValue = x.style.getPropertyValue('display') === "list-item" ? "none" : "list-item";
+                x.style.setProperty('display', newValue);
+            }
+
+            updateHideTriggerText();
+        }
+    </script>
+
+    <div class="hero-image">
+        <div class="hero-content">
+            <!-- <h1>Hi, I am Pedro Silva</h1>
+            <p>I am a Software Engineer</p> -->
+            <!-- <button>My CV</button> -->
+        </div>
+    </div>
+
+    <main class="main-content">
+        <h1>Pedro Silva</h1>
+        <section>
+            <p>
+              I am a Software Engineer enjoying the perks and challenges of London, England.
+	    </p>
+	    <p>I am passionate about technology and automation. There is something about picking up a problem and automating its resolution bit by bit, that just makes me tick.
+	    </p>
+	    <p>My main interests besides that are science, photography, psycology and learning. I also enjoy some physical activity and try to eat healthy(ish) most of the time.
+            </p>
+        </section>
+
+        <!-- <section>
+            <h2>Projects</h2>
+            You can find more information about my projects and experiments <a href="https://github.com/pamsilva">here</a>.
+        </section> -->
+
+        <!-- <section>
+            <h2> Who am I </h1>
+            <p>To download my CV click <a href="static/Report.pdf" download>here</a>.</p>
+        </section> -->
+
+        <section>
+            <h2>References</h2>
+            <p>
+                I've had the chance to spend about 3 years as a researcher on a robotics group during and after my MsC. During that period I've published a few papers of which the most relevant ones are the following:
+            </p>
+
+            <ul id="reference-list">
+                <li>
+                    Pedro Silva, Vitor Matos, and Cristina&nbsp;P Santos.
+                    Adaptive quadruped locomotion: learning to detect and avoid an
+                    obstacle.
+                    In <em>International Conference on Simulation of Adaptive Behavior</em>,
+                    pages 361--370. Springer, 2012.
+                    [&nbsp;<a href="Report_bib.html#silva2012adaptive">bib</a>&nbsp;]
+                </li>
+
+                <li>
+                    Pedro Silva, Cristina&nbsp;P Santos, and Daniel Polani.
+                    Optimization of stable quadruped locomotion using mutual information.
+                    In <em>11TH International Conference of Numerical Analysis and
+                        Applied Mathematics 2013: ICNAAM 2013</em>, volume 1558, pages 1021--1024. AIP
+                        Publishing, 2013.
+                        [&nbsp;<a href="Report_bib.html#silva2013optimization">bib</a>&nbsp;]
+                </li>
+
+                <li class="toggle-hide">
+                    Pedro Silva, Cristina&nbsp;P Santos, V&iacute;tor Matos, and Lino Costa.
+                    Automatic generation of biped locomotion controllers using genetic
+                    programming.
+                    <em>Robotics and Autonomous Systems</em>, 62(10):1531--1548, 2014.
+                    [&nbsp;<a href="Report_bib.html#silva2014automatic">bib</a>&nbsp;]
+                </li>
+
+                <li class="toggle-hide">
+                    Pedro Silva, Vitor Matos, and Cristina&nbsp;P Santos.
+                    Visually guided gait modifications for stepping over an obstacle: a
+                    bio-inspired approach.
+                    <em>Biological cybernetics</em>, 108(1):103--119, 2014.
+                    [&nbsp;<a href="Report_bib.html#silva2014visually">bib</a>&nbsp;]
+                </li>
+
+                <li class="toggle-hide">
+                    C&eacute;sar Ferreira, Pedro Silva, Jo&atilde;o Andr&eacute;, Cristina&nbsp;P Santos, and
+                    Lino Costa.
+                    Genetic programming applied to biped locomotion control with sensory
+                    information.
+                    In <em>Informatics in Control, Automation and Robotics (ICINCO),
+                        2014 11th International Conference on</em>, volume&nbsp;1, pages 53--62. IEEE, 2014.
+                        [&nbsp;<a href="Report_bib.html#ferreira2014genetic">bib</a>&nbsp;]
+                </li>
+            </ul>
+            <a class="toggle-trigger" onclick="allItemsDisplay()"> Show More ... </a>
+        </section>
+    </main>
+
+</body>
+</html>

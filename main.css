@@ -1,0 +1,70 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+html, body{
+    height: 100%;
+    margin: 0;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+/* .hero-image {
+    background-image: url("static/IMG-20190521-WA0000(1).jpg");
+    height: 78%;
+
+    background-position: 0% 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+} */
+
+/* .hero-content {
+    text-align: right;
+    position: absolute;
+    width: 90%;
+    top: 90%;
+    left: 95%;
+    transform: translate(-100%, -100%);
+    color: white;
+}
+
+.hero-content h1 {
+    color: white;
+} */
+
+.main-content {
+   margin: 0 auto;
+   max-width: 50em;
+
+   line-height: 1.5;
+   padding: 4em 1em;
+   color: #566b78;
+}
+
+header h1 {
+  color: white;
+}
+
+h2 {
+   margin-top: 1em;
+   padding-top: 1em;
+
+}
+
+h1,
+h2,
+strong {
+ color: #333;
+ font-weight: 500;
+}
+
+/* Reference display and hide toggle control. */
+.toggle-trigger {
+    color: teal;
+}
+
+.toggle-trigger:hover {
+    cursor: pointer;
+}
+
+.toggle-hide {
+    display: none;
+}
