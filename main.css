@@ -49,16 +49,21 @@ h2 {
 
 }
 
+a {
+  color: rgb(23, 155, 140);
+  text-decoration: None;
+  weight: bold;
+}
+
+a:active,a:hover {
+  text-decoration: underline;
+}
+
 h1,
 h2,
 strong {
  color: #333;
  font-weight: 500;
-}
-
-/* Reference display and hide toggle control. */
-.toggle-trigger {
-    color: teal;
 }
 
 .toggle-trigger:hover {
