@@ -6,7 +6,7 @@ html, body{
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
- .hero-image {
+.hero-image {
     background-image: url("static/b.jpg");
     height: 33%;
 
